@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221109 00:22:41.263" rpa="true" schemaversion="3">
+<suite id="s1" name="TesteRPA" source="c:\Users\tggom\OneDrive\Documentos\Automação de Testes\RobotFramework\RPA\RPARobot\Tests\TesteRPA.robot">
+<test id="s1-t1" name="RPA01 - Acessa diretório e converte arquivo .xls para .csv" line="6">
+<kw name="Acessa o arquivo" library="ControllerTestRPA">
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${Excel}</arg>
+<arg>FilesExcel\\Teste.xlsx</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20221109 00:22:41.357" level="INFO">${Excel} = FilesExcel\Teste.xlsx</msg>
+<status status="PASS" starttime="20221109 00:22:41.356" endtime="20221109 00:22:41.359"/>
+</kw>
+<kw name="Get File Extension" library="RPA.FileSystem">
+<var>${Extension}</var>
+<arg>FilesExcel\\Teste.xlsx</arg>
+<doc>Returns the suffix for the file.</doc>
+<msg timestamp="20221109 00:22:41.360" level="INFO">${Extension} = .xlsx</msg>
+<status status="PASS" starttime="20221109 00:22:41.359" endtime="20221109 00:22:41.360"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Extensão do arquivo: ${Extension}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221109 00:22:41.360" endtime="20221109 00:22:41.361"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${Extension}</arg>
+<arg>.xlsx</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20221109 00:22:41.361" endtime="20221109 00:22:41.362"/>
+</kw>
+<status status="PASS" starttime="20221109 00:22:41.355" endtime="20221109 00:22:41.362"/>
+</kw>
+<kw name="Converte o arquivo para .csv" library="ControllerTestRPA">
+<kw name="Open Workbook" library="RPA.Excel.Application">
+<arg>FilesExcel/Teste.xlsx</arg>
+<doc>Open Excel by filename</doc>
+<msg timestamp="20221109 00:22:41.789" level="INFO">Opening workbook: C:\Users\tggom\OneDrive\Documentos\Automação de Testes\RobotFramework\RPA\RPARobot\FilesExcel\Teste.xlsx</msg>
+<msg timestamp="20221109 00:22:41.793" level="INFO">Trying to open workbook by another method</msg>
+<status status="PASS" starttime="20221109 00:22:41.365" endtime="20221109 00:22:45.436"/>
+</kw>
+<kw name="Save Excel As" library="RPA.Excel.Application">
+<arg>FilesCSV/TestConvert.csv</arg>
+<arg>file_format=${6}</arg>
+<doc>Save Excel with name if workbook is open</doc>
+<status status="PASS" starttime="20221109 00:22:45.436" endtime="20221109 00:22:46.950"/>
+</kw>
+<status status="PASS" starttime="20221109 00:22:41.363" endtime="20221109 00:22:46.951"/>
+</kw>
+<status status="PASS" starttime="20221109 00:22:41.354" endtime="20221109 00:22:46.951"/>
+</test>
+<status status="PASS" starttime="20221109 00:22:41.267" endtime="20221109 00:22:46.952"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TesteRPA">TesteRPA</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
