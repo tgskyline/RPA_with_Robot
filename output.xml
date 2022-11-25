@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.6 on win32)" generated="20221124 19:58:05.862" rpa="true" schemaversion="3">
+<suite id="s1" name="TesteRPA" source="c:\Users\tiago.santos\OneDrive\Documentos\Automação de Testes\RobotFramework\RPA\RPARobot\Tests\TesteRPA.robot">
+<test id="s1-t1" name="RPA02 - Abre um aplicativo e faz login" line="10">
+<kw name="Abre o aplicativo X" library="ControllerTestRPA">
+<kw name="Open Application" library="RPA.Desktop">
+<var>${Open}</var>
+<arg>C:/Program Files/Appium Server GUI/Appium Server GUI.exe</arg>
+<doc>Start a given application by name (if in PATH),
+or by path to executable.</doc>
+<msg timestamp="20221124 19:58:06.568" level="INFO">Starting application: C:/Program Files/Appium Server GUI/Appium Server GUI.exe</msg>
+<msg timestamp="20221124 19:58:06.589" level="INFO">${Open} = Application("Appium Server GUI.exe", pid:52836)</msg>
+<status status="PASS" starttime="20221124 19:58:06.567" endtime="20221124 19:58:06.590"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 19:58:26.592" level="INFO">Slept 20 seconds</msg>
+<status status="PASS" starttime="20221124 19:58:06.590" endtime="20221124 19:58:26.592"/>
+</kw>
+<kw name="Find Element" library="RPA.Desktop">
+<var>${HOST}</var>
+<arg>image=Login.png</arg>
+<doc>Find an element defined by locator, and return its position.
+Raises ``ElementNotFound`` if` no matches were found, or
+``MultipleElementsFound`` if there were multiple matches.</doc>
+<msg timestamp="20221124 19:58:26.593" level="INFO">Resolving locator: image=Login.png</msg>
+<msg timestamp="20221124 19:58:26.593" level="FAIL">ValueError: No locator with name: image=Login.png</msg>
+<status status="FAIL" starttime="20221124 19:58:26.592" endtime="20221124 19:58:26.597"/>
+</kw>
+<status status="FAIL" starttime="20221124 19:58:06.565" endtime="20221124 19:58:26.597"/>
+</kw>
+<status status="FAIL" starttime="20221124 19:58:06.564" endtime="20221124 19:58:26.599">ValueError: No locator with name: image=Login.png</status>
+</test>
+<status status="FAIL" starttime="20221124 19:58:05.869" endtime="20221124 19:58:26.602"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TesteRPA">TesteRPA</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
