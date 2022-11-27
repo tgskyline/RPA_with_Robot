@@ -4,6 +4,10 @@ Library    RPA.FileSystem
 Library    RPA.Excel.Application
 Library    RPA.Desktop
 Library    Process
+Library    OperatingSystem
+
+*** Variables ***
+${Program_Steam}    C:/Program Files (x86)/Steam/Steam.exe 
 
 *** Keywords ***
 Acessa o arquivo
@@ -17,6 +21,12 @@ Converte o arquivo para .csv
     Save Excel As    FilesCSV/TestConvert.csv   file_format=${6}
 
 Abre o aplicativo X
-    ${Open}    RPA.Desktop.Open Application    C:/Program Files/Appium Server GUI/Appium Server GUI.exe    
-    # Sleep    20s   
-    # ${HOST}    Find Element    image=Login.png
+    RPA.Desktop.Open Application     ${Program_Steam}
+
+Faz o login 
+    Sleep    60s
+    Wait For Element    alias:Logo.Steam     
+
+
+
+    

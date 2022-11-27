@@ -1,38 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.10.6 on win32)" generated="20221124 19:58:05.862" rpa="true" schemaversion="3">
-<suite id="s1" name="TesteRPA" source="c:\Users\tiago.santos\OneDrive\Documentos\Automação de Testes\RobotFramework\RPA\RPARobot\Tests\TesteRPA.robot">
-<test id="s1-t1" name="RPA02 - Abre um aplicativo e faz login" line="10">
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221127 20:33:01.436" rpa="true" schemaversion="3">
+<suite id="s1" name="TesteRPA" source="c:\Users\tggom\OneDrive\Documentos\Automação de Testes\RobotFramework\RPA\RPARobot\Tests\TesteRPA.robot">
+<test id="s1-t1" name="RPA02 - Abre um aplicativo e faz login" line="11">
 <kw name="Abre o aplicativo X" library="ControllerTestRPA">
 <kw name="Open Application" library="RPA.Desktop">
-<var>${Open}</var>
-<arg>C:/Program Files/Appium Server GUI/Appium Server GUI.exe</arg>
+<arg>${Program_Steam}</arg>
 <doc>Start a given application by name (if in PATH),
 or by path to executable.</doc>
-<msg timestamp="20221124 19:58:06.568" level="INFO">Starting application: C:/Program Files/Appium Server GUI/Appium Server GUI.exe</msg>
-<msg timestamp="20221124 19:58:06.589" level="INFO">${Open} = Application("Appium Server GUI.exe", pid:52836)</msg>
-<status status="PASS" starttime="20221124 19:58:06.567" endtime="20221124 19:58:06.590"/>
+<msg timestamp="20221127 20:33:02.299" level="INFO">Starting application: C:/Program Files (x86)/Steam/Steam.exe</msg>
+<status status="PASS" starttime="20221127 20:33:02.298" endtime="20221127 20:33:02.303"/>
 </kw>
+<status status="PASS" starttime="20221127 20:33:02.298" endtime="20221127 20:33:02.303"/>
+</kw>
+<kw name="Faz o login" library="ControllerTestRPA">
 <kw name="Sleep" library="BuiltIn">
-<arg>20s</arg>
+<arg>60s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 19:58:26.592" level="INFO">Slept 20 seconds</msg>
-<status status="PASS" starttime="20221124 19:58:06.590" endtime="20221124 19:58:26.592"/>
+<msg timestamp="20221127 20:34:02.308" level="INFO">Slept 1 minute</msg>
+<status status="PASS" starttime="20221127 20:33:02.304" endtime="20221127 20:34:02.309"/>
 </kw>
-<kw name="Find Element" library="RPA.Desktop">
-<var>${HOST}</var>
-<arg>image=Login.png</arg>
-<doc>Find an element defined by locator, and return its position.
-Raises ``ElementNotFound`` if` no matches were found, or
-``MultipleElementsFound`` if there were multiple matches.</doc>
-<msg timestamp="20221124 19:58:26.593" level="INFO">Resolving locator: image=Login.png</msg>
-<msg timestamp="20221124 19:58:26.593" level="FAIL">ValueError: No locator with name: image=Login.png</msg>
-<status status="FAIL" starttime="20221124 19:58:26.592" endtime="20221124 19:58:26.597"/>
+<kw name="Wait For Element" library="RPA.Desktop">
+<arg>alias:Logo.Steam</arg>
+<doc>Wait for an element defined by locator to exist, or
+raise a TimeoutException if none were found within timeout.</doc>
+<msg timestamp="20221127 20:34:02.310" level="INFO">Resolving locator: alias:Logo.Steam</msg>
+<msg timestamp="20221127 20:34:02.312" level="FAIL">ValueError: No locator with name: Logo.Steam</msg>
+<status status="FAIL" starttime="20221127 20:34:02.310" endtime="20221127 20:34:02.315"/>
 </kw>
-<status status="FAIL" starttime="20221124 19:58:06.565" endtime="20221124 19:58:26.597"/>
+<status status="FAIL" starttime="20221127 20:33:02.304" endtime="20221127 20:34:02.315"/>
 </kw>
-<status status="FAIL" starttime="20221124 19:58:06.564" endtime="20221124 19:58:26.599">ValueError: No locator with name: image=Login.png</status>
+<status status="FAIL" starttime="20221127 20:33:02.297" endtime="20221127 20:34:02.316">ValueError: No locator with name: Logo.Steam</status>
 </test>
-<status status="FAIL" starttime="20221124 19:58:05.869" endtime="20221124 19:58:26.602"/>
+<status status="FAIL" starttime="20221127 20:33:01.443" endtime="20221127 20:34:02.319"/>
 </suite>
 <statistics>
 <total>

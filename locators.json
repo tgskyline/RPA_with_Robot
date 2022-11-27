@@ -1,0 +1,14 @@
+{
+    "Logo.Steam": {
+        "confidence": 80.0,
+        "path": ".images\\logo-steam-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "conta": {
+        "confidence": 80.0,
+        "path": ".images\\conta-path.png",
+        "source": null,
+        "type": "image"
+    }
+}

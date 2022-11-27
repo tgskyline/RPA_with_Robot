@@ -1,0 +1,7 @@
+rpaframework
+rpaframework-core
+rpaframework-dialogs
+rpaframework-pdf
+rpaframework-recognition
+rpaframework-windows
+
