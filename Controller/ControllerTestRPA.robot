@@ -22,6 +22,7 @@ Converte o arquivo para .csv
 
 Abre o aplicativo X
     RPA.Desktop.Open Application     ${Program_Steam}
+    Sleep    10s
 
 Faz o login 
     Sleep    60s
