@@ -1,6 +1,6 @@
 *** Settings *** 
 Resource    ../Controller/ControllerTestRPA.robot
-Task Teardown    Close All Applications
+Task Teardown    Close All Applications    
 
 *** Tasks ***
 
@@ -10,4 +10,4 @@ RPA01 - Acessa diretório e converte arquivo .xls para .csv
 
 RPA02 - Abre um aplicativo e faz login
     Abre o aplicativo X
-    # Faz o login
+    Faz o login
