@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221201 21:22:07.829" rpa="true" schemaversion="3">
+<suite id="s1" name="Tasks" source="c:\Users\tggom\OneDrive\Documentos\Automação de Testes\RobotFramework\RPA\RPARobot\tasks.robot">
+<test id="s1-t1" name="RPA02 - Abre um aplicativo e faz login" line="19">
+<kw name="Abre o aplicativo X">
+<kw name="Open Application" library="RPA.Desktop">
+<arg>${Program_Steam}</arg>
+<doc>Start a given application by name (if in PATH),
+or by path to executable.</doc>
+<msg timestamp="20221201 21:22:08.562" level="INFO">Starting application: C:/Program Files (x86)/Steam/Steam.exe</msg>
+<status status="PASS" starttime="20221201 21:22:08.562" endtime="20221201 21:22:08.567"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221201 21:22:13.579" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20221201 21:22:08.567" endtime="20221201 21:22:13.579"/>
+</kw>
+<status status="PASS" starttime="20221201 21:22:08.561" endtime="20221201 21:22:13.579"/>
+</kw>
+<kw name="Faz o login">
+<kw name="Wait For Element" library="RPA.Desktop">
+<arg>alias:Logo.Steam</arg>
+<doc>Wait for an element defined by locator to exist, or
+raise a TimeoutException if none were found within timeout.</doc>
+<msg timestamp="20221201 21:22:13.581" level="INFO">Resolving locator: alias:Logo.Steam</msg>
+<msg timestamp="20221201 21:22:13.583" level="FAIL">ValueError: No locator with name: Logo.Steam</msg>
+<status status="FAIL" starttime="20221201 21:22:13.581" endtime="20221201 21:22:13.585"/>
+</kw>
+<status status="FAIL" starttime="20221201 21:22:13.580" endtime="20221201 21:22:13.585"/>
+</kw>
+<status status="FAIL" starttime="20221201 21:22:08.560" endtime="20221201 21:22:13.586">ValueError: No locator with name: Logo.Steam</status>
+</test>
+<doc>Template robot main suite.</doc>
+<status status="FAIL" starttime="20221201 21:22:07.836" endtime="20221201 21:22:13.589"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tasks">Tasks</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
